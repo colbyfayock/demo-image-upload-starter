@@ -9,8 +9,13 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  color: #0070f3;
 }
 
 * {
   box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
 }
