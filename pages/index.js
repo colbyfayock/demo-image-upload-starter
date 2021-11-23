@@ -29,16 +29,6 @@ export default function Home() {
 
   async function handleOnSubmit(event) {
     event.preventDefault();
-
-    const fileInput = Array.from(event.currentTarget.elements).find(({ name }) => name === 'file');
-
-    const formData = new FormData();
-
-    for ( const file of fileInput.files ) {
-      formData.append('file', file);
-    }
-
-    console.log('File to Upload', formData.get('file'));
   }
 
   return (
