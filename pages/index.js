@@ -16,6 +16,7 @@ export default function Home() {
 
     reader.onload = function(onLoadEvent) {
       setImageSrc(onLoadEvent.target.result);
+      setUploadData(undefined);
     }
 
     reader.readAsDataURL(changeEvent.target.files[0]);
@@ -64,7 +65,7 @@ export default function Home() {
           
           <img src={imageSrc} />
           
-          {imageSrc && (
+          {imageSrc && !uploadData && (
             <p>
               <button>Upload Files</button>
             </p>
